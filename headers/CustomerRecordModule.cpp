@@ -27,7 +27,7 @@ void createCustomerRecord() {
         cout << "No. of Guest: ";
         getline(cin, noOfGuest);
 
-        ofstream file("Customer_Records.txt", ios::app);
+        ofstream file("data/Customer_Records.txt", ios::app);
 
         if (!file.is_open()) {
             cout << "Error opening the file.\n";
@@ -54,7 +54,7 @@ void createCustomerRecord() {
 }
 
 void viewCustomerRecords() {
-    ifstream file("Customer_Records.txt");
+    ifstream file("data/Customer_Records.txt");
 
     if (!file.is_open()) {
         cout << "Error opening the file.\n";
@@ -77,7 +77,7 @@ void updateCustomerRecord() {
     cout << "Enter the name of the customer you want to update: ";
     getline(cin, nameToSearch);
 
-    ifstream file("Customer_Records.txt");
+    ifstream file("data/Customer_Records.txt");
     ofstream tempFile("temp.txt");
 
     if (!file.is_open() || !tempFile.is_open()) {
@@ -130,8 +130,8 @@ void updateCustomerRecord() {
         return;
     }
 
-    remove("Customer_Records.txt");
-    rename("temp.txt", R"(Customer_Records.txt)");
+    remove("data/Customer_Records.txt");
+    rename("temp.txt", R"(data/Customer_Records.txt)");
 
     cout << "Customer record updated successfully.\n";
 }

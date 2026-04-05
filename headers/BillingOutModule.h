@@ -6,8 +6,8 @@
 using namespace std;
 
 void handlePayment() {
-	ifstream food("Customer_Orders.txt");
-	ifstream room("Customer_Booking.txt");
+	ifstream food("data/Customer_Orders.txt");
+	ifstream room("data/Customer_Booking.txt");
 	if (!food && !room) {
 	    cout << "No orders found.\n";
 	    return;
@@ -56,8 +56,8 @@ void handlePayment() {
 	
 	    if (payment >= final_total) {
 	        cout << "Payment successful! Your change is: P" << payment - final_total << endl;
-			ofstream deleteroom("Customer_Booking.txt", ios::trunc);
-			ofstream deletefood("Customer_Orders.txt", ios::trunc);
+			ofstream deleteroom("data/Customer_Booking.txt", ios::trunc);
+			ofstream deletefood("data/Customer_Orders.txt", ios::trunc);
 			exit(0);
 	    }
 	    else {

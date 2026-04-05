@@ -11,6 +11,7 @@ $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC) -I headers
 
 run: $(TARGET)
+	@mkdir -p data
 	./$(TARGET)
 
 clean:

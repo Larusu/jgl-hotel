@@ -41,8 +41,8 @@ void reservationRecordModule() {
 }
 
 void viewCustomerOrders() {
-    ifstream food("Customer_Orders.txt");
-    ifstream room("Customer_Booking.txt");
+    ifstream food("data/Customer_Orders.txt");
+    ifstream room("data/Customer_Booking.txt");
     if (!food.is_open() || !room.is_open()) {
         cout << "No orders found.\n";
         return;

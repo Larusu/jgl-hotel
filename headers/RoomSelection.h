@@ -70,7 +70,7 @@ void displayCategory(const string& categoryName, Room rooms[], int size) {
 }
 
 void saveOrder(Room orderedRooms[], int orderCount) {
-    ofstream file("Customer_Booking.txt");
+    ofstream file("data/Customer_Booking.txt");
     if (!file) {
         cout << "Error saving order.\n";
         return;

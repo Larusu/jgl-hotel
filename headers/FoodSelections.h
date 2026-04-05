@@ -96,7 +96,7 @@ void processOrder(Item items[], int size, Item orderedItems[], int quantities[],
 }
 
 void saveOrder(Item orderedItems[], int quantities[], int itemCount) {
-    ofstream file("Customer_Orders.txt");
+    ofstream file("data/Customer_Orders.txt");
     if (!file) {
         cout << "Error saving order.\n";
         return;
