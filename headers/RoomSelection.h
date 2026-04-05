@@ -16,7 +16,7 @@ void saveOrder(Room orderedRooms[], int orderCount);
 void processOrder(Room rooms[], int size, Room orderedRooms[], int& orderCount);
 
 void displayRoom() {
-    Room rooms[] = { {"Standard Room", 8000.00}, {"Premium Room", 12000.00}, {"Deluxe Room", 20000.00} };
+    Room rooms[] = { {"Standard Room", 8000}, {"Premium Room", 12000}, {"Deluxe Room", 20000} };
     Room orderedRooms[10]; 
     int orderCount = 0;    
 
