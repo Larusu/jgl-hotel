@@ -71,7 +71,7 @@ Or compile using your preferred IDE (Visual Studio, VS Code, etc.).
 │   ├── ReservationRecordModule.h
 │   ├── RoomSelection.h
 │   └── FoodSelections.h
-└── data/                 # Data files (generated at runtime)
+└── data/                 # Data files 
     ├── Customer_Records.txt
     ├── Customer_Booking.txt
     └── Customer_Orders.txt
